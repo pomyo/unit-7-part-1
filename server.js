@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect("mongodb://heroku_tlwqfxjj:Rocketscience101!@ds113736.mlab.com:13736/heroku_tlwqfxjj");
+mongoose.connect("mongodb://heroku_tlwqfxjj:Rocketscience101!awef@ds113736.mlab.com:13736/heroku_tlwqfxjj", { useNewUrlParser: true }).catch(function (err) {console.log(err)});
 
 
 require('./routes/api-routes.js')(app);
