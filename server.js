@@ -10,9 +10,10 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect("mongodb://heroku_tlwqfxjj:Rocketscience101!awef@ds113736.mlab.com:13736/heroku_tlwqfxjj", { useNewUrlParser: true }).catch(function (err) {console.log(err)});
+mongoose.connect("mongodb://heroku_tlwqfxjj:cs4rusg3lim2ic2817fut83mlf@ds113736.mlab.com:13736/heroku_tlwqfxjj", { useNewUrlParser: true }).catch(function (err) {console.log(err)});
  console.log(process.env.MONGODB_URI);
-
+ console.log(process.env.MONGODB_USERNAME);
+ console.log(process.env.MONGODB_PASSWORD);
 require('./routes/api-routes.js')(app);
 require('./routes/html-routes.js')(app);
 
